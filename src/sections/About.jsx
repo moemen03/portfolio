@@ -59,7 +59,7 @@ const About = () => {
                 showGraticules
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                labelsData={[{ lat: 40, lng: -100, text: 'Cairo, Egypt', color: 'white', size: 15 }]}
+                labelsData={[{ lat: 30.035712, lng: 31.344420, text: 'Cairo, Egypt', color: 'white', size: 15 }]}
               />
             </div>
             <div>
