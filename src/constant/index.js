@@ -1,3 +1,38 @@
+import {
+  route,
+  mobile,
+  backend,
+  creator,
+  web,
+  javascript,
+  typescript,
+  html,
+  css,
+  reactjs,
+  redux,
+  tailwind,
+  nodejs,
+  mongodb,
+  git,
+  figma,
+  docker,
+  meta,
+  starbucks,
+  tesla,
+  shopify,
+  carrent,
+  jobit,
+  tripguide,
+  threejs,
+  manifesto,
+  ensoulify,
+} from "../assets";
+import nextjs from '/assets/nextjs.svg'
+import shadcn from '/assets/shadcn1.png'
+
+
+
+
 export const navLinks = [
     {
       id: 1,
@@ -11,8 +46,14 @@ export const navLinks = [
     },
     {
       id: 3,
-      name: 'Work',
-      href: '#work',
+      name: 'Experience',
+      href: '#experience',
+      // href: '#work',
+    },
+    {
+      id: 4,
+      name: 'Projects',
+      href: '#projects',
     },
     {
       id: 4,
@@ -58,6 +99,44 @@ export const navLinks = [
   
   export const myProjects = [
     {
+      title: 'Rose - E-commerce website',
+      desc: 'Rose is a comprehensive e-commerce website for gifts and flowers. It offers a user-friendly interface, secure payment options, and a seamless shopping experience.',
+      subdesc:
+        'Next.js, Tailwind CSS, TypeScript, ShadCn ,NextAuth',
+      href: 'https://flowered-commerce.vercel.app/',
+      texture: '/textures/project/project4.mp4',
+      logo: '/assets/rose.png',
+      logoStyle: {
+        backgroundColor: '#FDD6EE',
+        border: '0.2px solid #FDD6EE',
+        boxShadow: '0px 0px 60px 0px #FDD6EE',
+      },
+      spotlight: '/assets/spotlight1.png',
+      tags: [
+        {
+          id: 2,
+          name: 'TailwindCSS',
+          path: 'assets/tailwindcss.png',
+        },
+        {
+          id: 3,
+          name: 'TypeScript',
+          path: '/assets/typescript.png',
+        },
+        {
+          id: 4,
+          name: 'Next.js',
+          path: '/assets/nextjs.svg',
+        },
+        {
+          id: 4,
+          name: 'shadcn',
+          path: '/assets/shadcn.png',
+        },
+
+      ],
+    },
+    {
       title: 'FreshCart - E-commerce website',
       desc: 'FreshCart is a comprehensive e-commerce website that caters to a wide range of products and services. It offers a user-friendly interface, secure payment options, and a seamless shopping experience.',
       subdesc:
@@ -86,11 +165,6 @@ export const navLinks = [
           id: 3,
           name: 'TypeScript',
           path: '/assets/typescript.png',
-        },
-        {
-          id: 4,
-          name: 'Next.js',
-          path: '/assets/nextjs.svg',
         },
         {
           id: 4,
@@ -141,7 +215,7 @@ export const navLinks = [
       desc: 'MomoTube is a YouTube clone that provides a user-friendly interface for users to watch videos, create playlists, and share their favorite content with others.',
       subdesc:
         'Built with React.js, Tailwind CSS, TypeScript , Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-      href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
+      href: 'https://momo-tube.vercel.app/',
       texture: '/textures/project/project3.mp4',
       logo: '/assets/project-logo3.png',
       logoStyle: {
@@ -218,3 +292,159 @@ export const navLinks = [
       animation: 'salute',
     },
   ];
+
+
+
+const styles = {
+  paddingX: "sm:px-16 px-6",
+  paddingY: "sm:py-16 py-6",
+  padding: "sm:px-16 px-6 sm:py-16 py-10",
+
+  heroHeadText:
+    "font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2",
+  heroSubText:
+    "text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]",
+
+  sectionHeadText:
+    "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
+  sectionSubText:
+    "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
+};
+
+// export { styles };
+  
+
+
+
+
+
+
+
+const technologies = [
+  {
+    name: "HTML 5",
+    icon: html,
+  },
+  {
+    name: "CSS 3",
+    icon: css,
+  },
+  {
+    name: "JavaScript",
+    icon: javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    name: "Next JS",
+    icon: nextjs,
+  },
+  {
+    name: "ShadCn",
+    icon: shadcn,
+  },
+  {
+    name: "Redux Toolkit",
+    icon: redux,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    name: "Three JS",
+    icon: threejs,
+  },
+  {
+    name: "git",
+    icon: git,
+  },
+  {
+    name: "figma",
+    icon: figma,
+  },
+];
+
+const experiences = [
+  {
+    title: "Front-end Mentor",
+    company_name: "Route Academy",
+    icon: route,
+    iconBg: "#383E56",
+    date: "October 2023 - November 2024",
+    points: [
+      "Privileged to guide aspiring developers in mastering frontend technologies, fostering not only technical effective communication and problem-solving skills. proficiency but also",
+      "Ability to collaborate effectively with team members and adapt to various learning styles.",
+    ],
+  },
+  {
+    title: "Frontend React.js Intern",
+    company_name: "Manifesto Business",
+    icon: manifesto,
+    iconBg: "#E6DEDD",
+    date: "May 2025 - September 2024",
+    points: [
+      "Contributed to the development of HAAI, a recruitment app, by building and optimizing dynamic user interfaces using React.js and integrating RESTful APIs for enhanced functionality.",
+      "Collaborated with designers to translate UI/UX wireframes into responsive code and participated in code reviews to maintain high-quality standards.",
+    ],
+  },
+  {
+    title: "Front-end Vue.js Intern",
+    company_name: "Ensoulify",
+    icon: ensoulify,
+    iconBg: "#383E56",
+    date: "September 2024 - October 2024",
+    points: [
+      "Built and sustained interactive user interfaces with Vue.js.",
+      "Contributed to the development of Edaripa",
+    ],
+  },
+  {
+    title: "Front-end Instructor",
+    company_name: "Route Academy",
+    icon: route,
+    iconBg: "#E6DEDD",
+    date: "December 2024 - Present",
+    points: [
+      "Delivered interactive courses on frontend development, covering HTML, CSS (including Flexbox, Grid, and animations), JavaScript, React.js, Next.js, responsive design.",
+      "Taught advanced topics like performance optimization, debugging, testing with tools like Jest, API integration, and modern CSS techniques (SASS, CSS Modules, and Styled Components), ensuring students gained practical, job-ready skills.",
+    ],
+  },
+];
+
+const testimonials = [
+  {
+    testimonial:
+      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+    name: "Sara Lee",
+    designation: "CFO",
+    company: "Acme Co",
+    image: "https://randomuser.me/api/portraits/women/4.jpg",
+  },
+  {
+    testimonial:
+      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+    name: "Chris Brown",
+    designation: "COO",
+    company: "DEF Corp",
+    image: "https://randomuser.me/api/portraits/men/5.jpg",
+  },
+  {
+    testimonial:
+      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "Lisa Wang",
+    designation: "CTO",
+    company: "456 Enterprises",
+    image: "https://randomuser.me/api/portraits/women/6.jpg",
+  },
+];
+
+
+
+export { technologies, experiences, testimonials,styles  };
