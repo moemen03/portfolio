@@ -1,5 +1,6 @@
 import {
   route,
+  giu,
   mobile,
   backend,
   creator,
@@ -383,6 +384,26 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "Teaching Assistant",
+    company_name: "German International university",
+    icon: giu,
+    iconBg: "#383E56",
+    date: "November 2024 - September 2025",
+    points: [
+      "Supported course delivery and student success by assisting with instruction, grading assignments, and providing technical mentorship during office hours"
+    ],
+  },
+  {
+    title: "Front-end Instructor",
+    company_name: "Route Academy",
+    icon: route,
+    iconBg: "#383E56",
+    date: "November 2024 - September 2025",
+    points: [
+      "Delivered interactive courses on frontend development, covering HTML, CSS (including Flexbox, Grid, and animations), JavaScript, React.js, Next.js, responsive design"
+    ],
+  },
   {
     title: "Front-end Mentor",
     company_name: "Route Academy",

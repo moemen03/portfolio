@@ -30,6 +30,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import route from "./route.png";
+import giu from "./giu.png";
 import manifesto from "./manifesto.png";
 import ensoulify from "./ensoulify.png";
 
@@ -37,6 +38,7 @@ export {
   ensoulify,
   manifesto,
   route,
+  giu,
   logo,
   backend,
   creator,
