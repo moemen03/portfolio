@@ -389,7 +389,7 @@ const experiences = [
     company_name: "German International university",
     icon: giu,
     iconBg: "#383E56",
-    date: "November 2024 - September 2025",
+    date: "September 2025 - Present",
     points: [
       "Supported course delivery and student success by assisting with instruction, grading assignments, and providing technical mentorship during office hours"
     ],
