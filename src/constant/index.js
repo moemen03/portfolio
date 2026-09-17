@@ -58,6 +58,11 @@ export const navLinks = [
     name: "Contact",
     href: "#contact",
   },
+  {
+    id: 6,
+    name: "Playground",
+    href: "/playground",
+  },
 ];
 
 export const clientReviews = [
@@ -405,17 +410,6 @@ const experiences = [
     ],
   },
   {
-    title: "Front-end Mentor",
-    company_name: "Route Academy",
-    icon: route,
-    iconBg: "#383E56",
-    date: "October 2023 - November 2024",
-    points: [
-      "Privileged to guide aspiring developers in mastering frontend technologies, fostering not only technical effective communication and problem-solving skills. proficiency but also",
-      "Ability to collaborate effectively with team members and adapt to various learning styles.",
-    ],
-  },
-  {
     title: "Frontend React.js Intern",
     company_name: "Manifesto Business",
     icon: manifesto,
@@ -438,16 +432,17 @@ const experiences = [
     ],
   },
   {
-    title: "Front-end Instructor",
+    title: "Front-end Mentor",
     company_name: "Route Academy",
     icon: route,
-    iconBg: "#E6DEDD",
-    date: "December 2024 - Present",
+    iconBg: "#383E56",
+    date: "October 2023 - November 2024",
     points: [
-      "Delivered interactive courses on frontend development, covering HTML, CSS (including Flexbox, Grid, and animations), JavaScript, React.js, Next.js, responsive design.",
-      "Taught advanced topics like performance optimization, debugging, testing with tools like Jest, API integration, and modern CSS techniques (SASS, CSS Modules, and Styled Components), ensuring students gained practical, job-ready skills.",
+      "Privileged to guide aspiring developers in mastering frontend technologies, fostering not only technical effective communication and problem-solving skills. proficiency but also",
+      "Ability to collaborate effectively with team members and adapt to various learning styles.",
     ],
-  },
+  }
+
 ];
 
 const testimonials = [

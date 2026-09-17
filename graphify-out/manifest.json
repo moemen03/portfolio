@@ -1,0 +1,377 @@
+{
+  "/Users/emanattia/Desktop/myPortfolio/src/main.jsx": {
+    "mtime": 1789647511.1467783,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/App.jsx": {
+    "mtime": 1789647511.0928705,
+    "ast_hash": "5b17054b490f44bab9b952f77216178f",
+    "semantic_hash": "5b17054b490f44bab9b952f77216178f"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/sections/Footer.jsx": {
+    "mtime": 1789647511.1475077,
+    "ast_hash": "09d9f4fd059aba5ebe611270d0c7f74b",
+    "semantic_hash": "09d9f4fd059aba5ebe611270d0c7f74b"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/sections/About.jsx": {
+    "mtime": 1789651497.2726498,
+    "ast_hash": "3eebe91cac36c47d80f84dc027809063",
+    "semantic_hash": "3eebe91cac36c47d80f84dc027809063"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/sections/Clients.jsx": {
+    "mtime": 1789647511.1471207,
+    "ast_hash": "44fcd261076daad951d8cc4d18632dce",
+    "semantic_hash": "44fcd261076daad951d8cc4d18632dce"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/sections/Tech.jsx": {
+    "mtime": 1789647511.1478524,
+    "ast_hash": "75f18203a80ab9c2c6d9f7ea7c761c4e",
+    "semantic_hash": "75f18203a80ab9c2c6d9f7ea7c761c4e"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/sections/Experience.jsx": {
+    "mtime": 1789647511.1474202,
+    "ast_hash": "4cb0efe5a1e9276d1f842671e95a969f",
+    "semantic_hash": "4cb0efe5a1e9276d1f842671e95a969f"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/sections/Navbar.jsx": {
+    "mtime": 1789647511.1476793,
+    "ast_hash": "97e2c5edd3230f2a61f02c566fafaa6f",
+    "semantic_hash": "97e2c5edd3230f2a61f02c566fafaa6f"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/sections/Hero.jsx": {
+    "mtime": 1789651504.5995939,
+    "ast_hash": "02dcaeac985b1e5b0eb1fd2bad3adb26",
+    "semantic_hash": "02dcaeac985b1e5b0eb1fd2bad3adb26"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/sections/Projects.jsx": {
+    "mtime": 1789647511.1477664,
+    "ast_hash": "f5a5476d5706c4f31212a80345aaf7eb",
+    "semantic_hash": "f5a5476d5706c4f31212a80345aaf7eb"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/sections/Contact.jsx": {
+    "mtime": 1789647511.1473262,
+    "ast_hash": "716d4c7b4fe4a3c653b7733317832161",
+    "semantic_hash": "716d4c7b4fe4a3c653b7733317832161"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/hoc/SectionWrapper.jsx": {
+    "mtime": 1789647511.1463625,
+    "ast_hash": "db92e998065dd06f1cc25e958057fbe4",
+    "semantic_hash": "db92e998065dd06f1cc25e958057fbe4"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/hoc/index.js": {
+    "mtime": 1789647511.1464427,
+    "ast_hash": "9c87def7b7eb2580c485537aa4747acf",
+    "semantic_hash": "9c87def7b7eb2580c485537aa4747acf"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/utils/motion.js": {
+    "mtime": 1789647511.1479826,
+    "ast_hash": "be93544bff08bc52a4f7be69b9f592da",
+    "semantic_hash": "be93544bff08bc52a4f7be69b9f592da"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/Developer.jsx": {
+    "mtime": 1789647511.14412,
+    "ast_hash": "4765733ec40f6b9b4debb4fe44ca1d29",
+    "semantic_hash": "4765733ec40f6b9b4debb4fe44ca1d29"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/setup.jsx": {
+    "mtime": 1789647511.1453242,
+    "ast_hash": "e55abacfb51f21c381ed313479cfefc3",
+    "semantic_hash": "e55abacfb51f21c381ed313479cfefc3"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/DemoComputer.jsx": {
+    "mtime": 1789647511.144017,
+    "ast_hash": "84470e4c059a2bbe98ae447be715d95d",
+    "semantic_hash": "84470e4c059a2bbe98ae447be715d95d"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/Rings.jsx": {
+    "mtime": 1789647511.144532,
+    "ast_hash": "495cd13ad1b61cc7292479e41f364064",
+    "semantic_hash": "495cd13ad1b61cc7292479e41f364064"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/Button.jsx": {
+    "mtime": 1789647511.1437464,
+    "ast_hash": "4033f380caa5265602715a18cfa4ea35",
+    "semantic_hash": "4033f380caa5265602715a18cfa4ea35"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/HackerRoom.jsx": {
+    "mtime": 1789647511.1442015,
+    "ast_hash": "39e1ed94cd2e50043f898cd027bfea2a",
+    "semantic_hash": "39e1ed94cd2e50043f898cd027bfea2a"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/Cube.jsx": {
+    "mtime": 1789647511.1439252,
+    "ast_hash": "d793dc99da06af57d745e5a501af02dd",
+    "semantic_hash": "d793dc99da06af57d745e5a501af02dd"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/Loader.jsx": {
+    "mtime": 1789647511.1443715,
+    "ast_hash": "340af8ce4058493ea19fb93cd14e5c3a",
+    "semantic_hash": "340af8ce4058493ea19fb93cd14e5c3a"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/CanvasLoader.jsx": {
+    "mtime": 1789647511.143837,
+    "ast_hash": "64fad1abbe5751e22cb583cfbc1d38ac",
+    "semantic_hash": "64fad1abbe5751e22cb583cfbc1d38ac"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/HeroCamera.jsx": {
+    "mtime": 1789647511.1442869,
+    "ast_hash": "8b57712b413587041e07b28216efafd2",
+    "semantic_hash": "8b57712b413587041e07b28216efafd2"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/ReactLogo.jsx": {
+    "mtime": 1789647511.1444519,
+    "ast_hash": "649238f1c734383fcdaa0e683ee2a461",
+    "semantic_hash": "649238f1c734383fcdaa0e683ee2a461"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/MouseMascot.jsx": {
+    "mtime": 1789650167.8661203,
+    "ast_hash": "bf489109ed5f9bcb64c84cb2c37acb72",
+    "semantic_hash": "bf489109ed5f9bcb64c84cb2c37acb72"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/Alert.jsx": {
+    "mtime": 1789647511.1436572,
+    "ast_hash": "dfd28ee0617c8dcf3c744c5ad53c82ad",
+    "semantic_hash": "dfd28ee0617c8dcf3c744c5ad53c82ad"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/PixelSnow.jsx": {
+    "mtime": 1789651504.4585,
+    "ast_hash": "5b1a3c83722951942f5df7a5af41aebc",
+    "semantic_hash": "5b1a3c83722951942f5df7a5af41aebc"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/Target.jsx": {
+    "mtime": 1789647511.1446166,
+    "ast_hash": "ed326bdbc9e9f5b7acddff665247a93f",
+    "semantic_hash": "ed326bdbc9e9f5b7acddff665247a93f"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/canvas/Computers.jsx": {
+    "mtime": 1789647511.1448395,
+    "ast_hash": "25e2752b295898bd57f390a9cc041e84",
+    "semantic_hash": "25e2752b295898bd57f390a9cc041e84"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/canvas/Stars.jsx": {
+    "mtime": 1789647511.1450121,
+    "ast_hash": "8ebc647119d70be72ed4de2693b46786",
+    "semantic_hash": "8ebc647119d70be72ed4de2693b46786"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/canvas/index.js": {
+    "mtime": 1789647511.145093,
+    "ast_hash": "c392f281207b8edcf0e57c9c8a86f4a4",
+    "semantic_hash": "c392f281207b8edcf0e57c9c8a86f4a4"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/canvas/Ball.jsx": {
+    "mtime": 1789647511.1447544,
+    "ast_hash": "b6b9edf3ac1f1a24901b7bb046f41778",
+    "semantic_hash": "b6b9edf3ac1f1a24901b7bb046f41778"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/components/canvas/Earth.jsx": {
+    "mtime": 1789647511.1449313,
+    "ast_hash": "52f10a6a8a8a9381f6db9060208ad109",
+    "semantic_hash": "52f10a6a8a8a9381f6db9060208ad109"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/constant/index.js": {
+    "mtime": 1789647511.1462195,
+    "ast_hash": "819ea289e4c1695a9bea3468cdd1658b",
+    "semantic_hash": "819ea289e4c1695a9bea3468cdd1658b"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/constant/Ring.js": {
+    "mtime": 1789647511.1460843,
+    "ast_hash": "495cd13ad1b61cc7292479e41f364064",
+    "semantic_hash": "495cd13ad1b61cc7292479e41f364064"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/constant/Cube.js": {
+    "mtime": 1789647511.1460001,
+    "ast_hash": "d793dc99da06af57d745e5a501af02dd",
+    "semantic_hash": "d793dc99da06af57d745e5a501af02dd"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/index.js": {
+    "mtime": 1789647511.109205,
+    "ast_hash": "8bbfca6724b067314811027519fdb419",
+    "semantic_hash": "8bbfca6724b067314811027519fdb419"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/email.png": {
+    "mtime": 1789647511.1003816,
+    "ast_hash": "81874447887ea82325c1f97f812cd480",
+    "semantic_hash": "81874447887ea82325c1f97f812cd480"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/jobit.png": {
+    "mtime": 1789647511.1129417,
+    "ast_hash": "261dcd8d434a22a8ce067dcfe77160b8",
+    "semantic_hash": "261dcd8d434a22a8ce067dcfe77160b8"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/giu.png": {
+    "mtime": 1789647511.101196,
+    "ast_hash": "3a19cca545984b73bade1c4ccba128cd",
+    "semantic_hash": "3a19cca545984b73bade1c4ccba128cd"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/github.png": {
+    "mtime": 1789647511.1009085,
+    "ast_hash": "69b7e397e348747e802b90e5eb0bfbd4",
+    "semantic_hash": "69b7e397e348747e802b90e5eb0bfbd4"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tripguide.png": {
+    "mtime": 1789647511.128745,
+    "ast_hash": "5eb0d3c9dd99525d0aa2b584dd573133",
+    "semantic_hash": "5eb0d3c9dd99525d0aa2b584dd573133"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/ensoulify.png": {
+    "mtime": 1789647511.1007612,
+    "ast_hash": "d770830a575a77f7943933ff46788d4f",
+    "semantic_hash": "d770830a575a77f7943933ff46788d4f"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/manifesto.png": {
+    "mtime": 1789647511.1155307,
+    "ast_hash": "6e399359a1e1c71795a54dc0019119cf",
+    "semantic_hash": "6e399359a1e1c71795a54dc0019119cf"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/close.svg": {
+    "mtime": 1789647511.0988781,
+    "ast_hash": "9b36bd2df0ca276246c85a1f5bbfc2ed",
+    "semantic_hash": "9b36bd2df0ca276246c85a1f5bbfc2ed"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/herobg.png": {
+    "mtime": 1789647511.105871,
+    "ast_hash": "823cad50e07bcea74f9dee734ce3819a",
+    "semantic_hash": "823cad50e07bcea74f9dee734ce3819a"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/route.png": {
+    "mtime": 1789647511.1168892,
+    "ast_hash": "c45451feea3b5603efc1c9fb264d5807",
+    "semantic_hash": "c45451feea3b5603efc1c9fb264d5807"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/web.png": {
+    "mtime": 1789647511.1430275,
+    "ast_hash": "f59df0f5b55cde9fc8e02c3dfe1e3540",
+    "semantic_hash": "f59df0f5b55cde9fc8e02c3dfe1e3540"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/mobile.png": {
+    "mtime": 1789647511.1157675,
+    "ast_hash": "9537758db1d756949a924fcd4404895f",
+    "semantic_hash": "9537758db1d756949a924fcd4404895f"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/creator.png": {
+    "mtime": 1789647511.1000564,
+    "ast_hash": "2fb53dc768e9f2b21e8eba0b31c50f1d",
+    "semantic_hash": "2fb53dc768e9f2b21e8eba0b31c50f1d"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/email1.png": {
+    "mtime": 1789647511.1005764,
+    "ast_hash": "f913cdc156e470141a80da02952c6c75",
+    "semantic_hash": "f913cdc156e470141a80da02952c6c75"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/react.svg": {
+    "mtime": 1789647511.115915,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": "f0402b67b6ce880f65666bb49e841696"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/backend.png": {
+    "mtime": 1789647511.0931563,
+    "ast_hash": "b6f97a0bb77c12636d32a57efacd1d10",
+    "semantic_hash": "b6f97a0bb77c12636d32a57efacd1d10"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/whatsapp.png": {
+    "mtime": 1789647511.14339,
+    "ast_hash": "39d438bb5d10752c8327450587679b32",
+    "semantic_hash": "39d438bb5d10752c8327450587679b32"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/logo.svg": {
+    "mtime": 1789647511.115434,
+    "ast_hash": "472aee8ba4c1e3c02bd88a90fbe91581",
+    "semantic_hash": "472aee8ba4c1e3c02bd88a90fbe91581"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/carrent.png": {
+    "mtime": 1789647511.0966368,
+    "ast_hash": "de7775e7e769abcd0478a0f32554addf",
+    "semantic_hash": "de7775e7e769abcd0478a0f32554addf"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/menu.svg": {
+    "mtime": 1789647511.1156344,
+    "ast_hash": "b2443b79da2a63c56c83748beb22739a",
+    "semantic_hash": "b2443b79da2a63c56c83748beb22739a"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/git.png": {
+    "mtime": 1789647511.1176562,
+    "ast_hash": "91e38c1fb4b2410c06d56542d09086d0",
+    "semantic_hash": "91e38c1fb4b2410c06d56542d09086d0"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/docker.png": {
+    "mtime": 1789647511.117436,
+    "ast_hash": "48daa53dc2e75aa18777f55eb610c4f1",
+    "semantic_hash": "48daa53dc2e75aa18777f55eb610c4f1"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/tailwind.png": {
+    "mtime": 1789647511.1188629,
+    "ast_hash": "c73f9afce409c73a75bb36ce9da84a94",
+    "semantic_hash": "c73f9afce409c73a75bb36ce9da84a94"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/javascript.png": {
+    "mtime": 1789647511.117875,
+    "ast_hash": "c1f39577de277de6ff5f654e996f1028",
+    "semantic_hash": "c1f39577de277de6ff5f654e996f1028"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/figma.png": {
+    "mtime": 1789647511.117553,
+    "ast_hash": "897539713a3105b6ee3b797851459130",
+    "semantic_hash": "897539713a3105b6ee3b797851459130"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/reactjs.png": {
+    "mtime": 1789647511.118513,
+    "ast_hash": "f70556624353bdc24ec1e69a2d979630",
+    "semantic_hash": "f70556624353bdc24ec1e69a2d979630"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/html.png": {
+    "mtime": 1789647511.1177793,
+    "ast_hash": "ff5aca29bd447b791c743ad0075e5aa3",
+    "semantic_hash": "ff5aca29bd447b791c743ad0075e5aa3"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/threejs.svg": {
+    "mtime": 1789647511.1189537,
+    "ast_hash": "2a6be101e0d8047e1d0e9a4ececeee21",
+    "semantic_hash": "2a6be101e0d8047e1d0e9a4ececeee21"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/redux.png": {
+    "mtime": 1789647511.1186337,
+    "ast_hash": "31f3e54c7d49efed1b6a03edc4476ba2",
+    "semantic_hash": "31f3e54c7d49efed1b6a03edc4476ba2"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/typescript.png": {
+    "mtime": 1789647511.1191564,
+    "ast_hash": "6a41ab01fd39f8bae6bad97ef7109cf9",
+    "semantic_hash": "6a41ab01fd39f8bae6bad97ef7109cf9"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/css.png": {
+    "mtime": 1789647511.1172128,
+    "ast_hash": "562320553594c7fc047b9d0cf55233ab",
+    "semantic_hash": "562320553594c7fc047b9d0cf55233ab"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/mongodb.png": {
+    "mtime": 1789647511.1180007,
+    "ast_hash": "1fb83876d8f00b2f67374b05838d09d2",
+    "semantic_hash": "1fb83876d8f00b2f67374b05838d09d2"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/tech/nodejs.png": {
+    "mtime": 1789647511.1182146,
+    "ast_hash": "9e79e8c3cdcccfc06c9840883f15b2c1",
+    "semantic_hash": "9e79e8c3cdcccfc06c9840883f15b2c1"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/company/shopify.png": {
+    "mtime": 1789647511.099538,
+    "ast_hash": "7d0c465185ea1aa651737aedf2e889f9",
+    "semantic_hash": "7d0c465185ea1aa651737aedf2e889f9"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/company/tesla.png": {
+    "mtime": 1789647511.099811,
+    "ast_hash": "00f12a1675ac2554f83449c254abfc66",
+    "semantic_hash": "00f12a1675ac2554f83449c254abfc66"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/company/meta.png": {
+    "mtime": 1789647511.099362,
+    "ast_hash": "c39c206e11ef45ddc19167e6c167e1d8",
+    "semantic_hash": "c39c206e11ef45ddc19167e6c167e1d8"
+  },
+  "/Users/emanattia/Desktop/myPortfolio/src/assets/company/starbucks.png": {
+    "mtime": 1789647511.0996647,
+    "ast_hash": "739125c98702ba3575a572618abc82f6",
+    "semantic_hash": "739125c98702ba3575a572618abc82f6"
+  }
+}

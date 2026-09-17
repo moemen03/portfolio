@@ -1,107 +1,86 @@
-import { useState } from 'react';
-import Globe from 'react-globe.gl';
-
-import Button from '../components/Button.jsx';
+const specialties = [
+  {
+    title: 'Software Engineering',
+    description: 'Building reliable products across interfaces, APIs, and databases.',
+    color: 'violet',
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8 9 5 12l3 3M16 9l3 3-3 3M14 6l-4 12" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Teaching & Mentorship',
+    description: 'Helping GIU students turn theory into working software.',
+    color: 'mint',
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m3 9 9-5 9 5-9 5-9-5Z" />
+        <path d="M7 12v4.5c2.7 2 7.3 2 10 0V12M21 9v6" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Agentic AI',
+    description: 'Exploring intelligent agents, tool use, and automation.',
+    color: 'amber',
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4" />
+      </svg>
+    ),
+  },
+];
 
 const About = () => {
-  const [hasCopied, setHasCopied] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText('moemenatia4@gmail.com');
-    setHasCopied(true);
-
-    setTimeout(() => {
-      setHasCopied(false);
-    }, 2000);
-  };
-
   return (
-    <section className="c-space my-20" id="about">
-      <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
-        <div className="col-span-1 xl:row-span-3">
-          <div className="grid-container">
-            <img src="/assets/programmer.png" alt="grid-1" className="w-full sm:h-[180px] h-[180px] object-contain mb-5" />
+    <section className="about-minimal c-space" id="about" aria-labelledby="about-title">
+      <div className="about-minimal-grid">
+        <div className="about-minimal-services" aria-label="What I do">
+          <p className="about-minimal-label">What I do</p>
 
-            <div>
-              <p className="grid-headtext">Hi, I’m Moamen Alaa</p>
-              <p className="grid-subtext">
-                Software Engineer with 2+ years of experience building responsive, scalable web apps
-                with React, Next.js, TypeScript, and Supabase. I&apos;ve taught 200+ students as a frontend
-                instructor and I&apos;m currently pursuing a Master&apos;s in Software Engineering at GIU.
-              </p>
-            </div>
+          <div className="about-minimal-list">
+            {specialties.map((specialty) => (
+              <article className="about-minimal-item" key={specialty.title}>
+                <div className={`about-minimal-icon about-minimal-icon--${specialty.color}`}>
+                  {specialty.icon}
+                </div>
+                <div>
+                  <h3>{specialty.title}</h3>
+                  <p>{specialty.description}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
 
-        <div className="col-span-1 xl:row-span-3">
-          <div className="grid-container">
-            <img src="/assets/grid2.png" alt="grid-2" className="w-full sm:h-[250px] h-fit object-contain" />
+        <div className="about-minimal-copy">
+          <p className="about-minimal-label">About me</p>
+          <h2 id="about-title">Software engineer, educator, and lifelong learner.</h2>
 
-            <div>
-              <p className="grid-headtext">Tech Stack</p>
-              <p className="grid-subtext">
-                I specialize in React.js & Next.js with TypeScript on the frontend, backed by Node.js
-                and Supabase, building robust, scalable full-stack applications.
-              </p>
-            </div>
+          <div className="about-minimal-body">
+            <p>
+              I&apos;m Moamen Alaa, a software engineer with 2+ years of experience building responsive,
+              production-ready applications with React, Next.js, TypeScript, Node.js, PostgreSQL,
+              and Supabase.
+            </p>
+            <p>
+              As a Teaching Assistant at the German International University, I turn complex ideas
+              into practical lessons. I&apos;m now expanding that mindset into agentic AI and
+              human-centered automation.
+            </p>
           </div>
-        </div>
 
-        <div className="col-span-1 xl:row-span-4">
-          <div className="grid-container">
-            <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
-              <Globe
-                height={326}
-                width={326}
-                backgroundColor="rgba(0, 0, 0, 0)"
-                backgroundImageOpacity={0.5}
-                showAtmosphere
-                showGraticules
-                globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                bumpImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-                labelsData={[{ lat: 30.035712, lng: 31.344420, text: 'Cairo, Egypt', color: 'white', size: 15 }]}
-              />
-            </div>
-            <div>
-              <p className="grid-headtext">I’m very flexible with time zone communications & locations</p>
-              <p className="grid-subtext">I&apos;m based in Cairo, Egypt and open to remote work worldwide.</p>
-              <a href="#contact">
-                <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
-              </a>
-            </div>
+          <div className="about-minimal-stats" aria-label="Career highlights">
+            <div><strong>2+</strong><span>Years of experience</span></div>
+            <div><strong>200+</strong><span>Students taught</span></div>
+            <div><strong>15+</strong><span>Core technologies</span></div>
           </div>
-        </div>
 
-        <div className="xl:col-span-2 xl:row-span-3">
-          <div className="grid-container">
-            <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain" />
-
-            <div>
-              <p className="grid-headtext">My Passion for Coding</p>
-              <p className="grid-subtext">
-                I love solving problems and building things through code. Programming isn&apos;t just my
-                profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="xl:col-span-1 xl:row-span-2">
-          <div className="grid-container">
-            <img
-              src="/assets/grid4.png"
-              alt="grid-4"
-              className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
-            />
-
-            <div className="space-y-2">
-              <p className="grid-subtext text-center">Contact me</p>
-              <div className="copy-container" onClick={handleCopy}>
-                <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt="copy" />
-                <p className="lg:text-2xl md:text-xl font-medium text-gray_gradient text-white">moemenatia4@gmail.com</p>
-              </div>
-            </div>
-          </div>
+          <a className="about-minimal-link" href="#experience">
+            See my experience <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </div>
     </section>

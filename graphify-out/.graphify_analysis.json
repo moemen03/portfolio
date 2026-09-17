@@ -1,0 +1,265 @@
+{
+  "communities": {
+    "0": [
+      "components_canvasloader_canvasloader",
+      "components_democomputer_democomputer",
+      "constant_index_calculatesizes",
+      "constant_index_clientreviews",
+      "constant_index_myprojects",
+      "constant_index_navlinks",
+      "constant_index_testimonials",
+      "constant_index_workexperiences",
+      "sections_navbar_navbar",
+      "sections_navbar_navitems",
+      "sections_projects_projects",
+      "src_assets_index_js",
+      "src_components_canvasloader_jsx",
+      "src_components_democomputer_jsx",
+      "src_constant_index_js",
+      "src_sections_navbar_jsx",
+      "src_sections_projects_jsx"
+    ],
+    "1": [
+      "canvas_ball_ball",
+      "canvas_ball_ballcanvas",
+      "canvas_computers_computers",
+      "canvas_computers_computerscanvas",
+      "canvas_earth_earth",
+      "canvas_earth_earthcanvas",
+      "canvas_stars_stars",
+      "canvas_stars_starscanvas",
+      "components_loader_canvasloader",
+      "src_components_canvas_ball_jsx",
+      "src_components_canvas_computers_jsx",
+      "src_components_canvas_earth_jsx",
+      "src_components_canvas_index_js",
+      "src_components_canvas_stars_jsx",
+      "src_components_loader_jsx"
+    ],
+    "2": [
+      "constant_index_styles",
+      "hoc_sectionwrapper_starwrapper",
+      "sections_contact_contact",
+      "src_hoc_sectionwrapper_jsx",
+      "src_sections_contact_jsx",
+      "src_utils_motion_js",
+      "utils_motion_fadein",
+      "utils_motion_slidein",
+      "utils_motion_staggercontainer",
+      "utils_motion_zoomin"
+    ],
+    "3": [
+      "sections_about_about",
+      "sections_about_roles",
+      "sections_footer_footer",
+      "sections_footer_socials",
+      "src_app_app",
+      "src_app_jsx",
+      "src_main_jsx",
+      "src_sections_about_jsx",
+      "src_sections_footer_jsx"
+    ],
+    "4": [
+      "constant_index_experiences",
+      "constant_index_technologies",
+      "sections_experience_experience",
+      "sections_experience_experiencecard",
+      "sections_tech_tech",
+      "src_hoc_index_js",
+      "src_sections_experience_jsx",
+      "src_sections_tech_jsx",
+      "utils_motion_textvariant"
+    ],
+    "5": [
+      "components_mousemascot_getdirection",
+      "components_mousemascot_mousemascot",
+      "components_pixelsnow_pixelsnow",
+      "sections_hero_hero",
+      "src_components_mousemascot_jsx",
+      "src_components_pixelsnow_jsx",
+      "src_sections_hero_jsx"
+    ],
+    "6": [
+      "components_alert_alert",
+      "src_components_alert_jsx"
+    ],
+    "7": [
+      "components_cube_cube",
+      "src_components_cube_jsx"
+    ],
+    "8": [
+      "components_developer_developer",
+      "src_components_developer_jsx"
+    ],
+    "9": [
+      "components_hackerroom_hackerroom",
+      "src_components_hackerroom_jsx"
+    ],
+    "10": [
+      "components_reactlogo_reactlogo",
+      "src_components_reactlogo_jsx"
+    ],
+    "11": [
+      "components_setup_setup",
+      "src_components_setup_jsx"
+    ],
+    "12": [
+      "constant_cube_cube",
+      "src_constant_cube_js"
+    ],
+    "13": [
+      "constant_ring_rings",
+      "src_constant_ring_js"
+    ],
+    "14": [
+      "components_button_button",
+      "src_components_button_jsx"
+    ],
+    "15": [
+      "components_herocamera_herocamera",
+      "src_components_herocamera_jsx"
+    ],
+    "16": [
+      "components_rings_rings",
+      "src_components_rings_jsx"
+    ],
+    "17": [
+      "components_target_target",
+      "src_components_target_jsx"
+    ],
+    "18": [
+      "sections_clients_clients",
+      "src_sections_clients_jsx"
+    ]
+  },
+  "cohesion": {
+    "0": 0.1323529411764706,
+    "1": 0.1523809523809524,
+    "2": 0.3111111111111111,
+    "3": 0.2222222222222222,
+    "4": 0.25,
+    "5": 0.2857142857142857,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0
+  },
+  "gods": [
+    {
+      "id": "constant_index_styles",
+      "label": "styles",
+      "degree": 4
+    },
+    {
+      "id": "utils_motion_textvariant",
+      "label": "textVariant()",
+      "degree": 3
+    },
+    {
+      "id": "utils_motion_slidein",
+      "label": "slideIn()",
+      "degree": 3
+    },
+    {
+      "id": "utils_motion_staggercontainer",
+      "label": "staggerContainer()",
+      "degree": 3
+    },
+    {
+      "id": "sections_experience_experience",
+      "label": "Experience()",
+      "degree": 2
+    },
+    {
+      "id": "sections_contact_contact",
+      "label": "Contact()",
+      "degree": 2
+    },
+    {
+      "id": "hoc_sectionwrapper_starwrapper",
+      "label": "StarWrapper()",
+      "degree": 2
+    },
+    {
+      "id": "constant_index_navlinks",
+      "label": "navLinks",
+      "degree": 2
+    },
+    {
+      "id": "constant_index_myprojects",
+      "label": "myProjects",
+      "degree": 2
+    },
+    {
+      "id": "constant_index_technologies",
+      "label": "technologies",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Experience()",
+      "target": "textVariant()",
+      "source_files": [
+        "src/sections/Experience.jsx",
+        "src/utils/motion.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "Contact()",
+      "target": "slideIn()",
+      "source_files": [
+        "src/sections/Contact.jsx",
+        "src/utils/motion.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "StarWrapper()",
+      "target": "staggerContainer()",
+      "source_files": [
+        "src/hoc/SectionWrapper.jsx",
+        "src/utils/motion.js"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "cross-file semantic connection"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `styles` connect `Community 2` to `Community 0`, `Community 4`?",
+      "why": "High betweenness centrality (0.004) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `textVariant()` connect `Community 4` to `Community 2`?",
+      "why": "High betweenness centrality (0.001) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `socials`, `roles`, `clientReviews` to the rest of the system?",
+      "why": "5 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.1323529411764706 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
