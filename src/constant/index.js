@@ -102,11 +102,101 @@ export const clientReviews = [
 
 export const myProjects = [
   {
+    title: "Mawaeedy",
+    category: "AI productivity · Mobile",
+    desc: "A smart AI calendar, daily planner, and life assistant designed to keep tasks, goals, and routines organized in one place.",
+    subdesc:
+      "Create and edit plans by voice, through conversational chat, or with familiar manual controls, making day-to-day planning feel natural wherever you are.",
+    texture: "/textures/project/project6.mp4",
+    logoText: "MW",
+    logoStyle: {
+      backgroundColor: "#141A2E",
+      border: "0.2px solid #7EA6FF",
+      boxShadow: "0px 0px 60px 0px rgba(126, 166, 255, 0.32)",
+      color: "#C9D8FF",
+    },
+    spotlight: "/assets/spotlight4.png",
+    tags: [
+      { id: 1, name: "React Native", path: "/assets/react.svg" },
+      { id: 2, name: "Convex" },
+      { id: 3, name: "PostgreSQL" },
+      { id: 4, name: "Clerk", path: "/assets/clerk.avif" },
+      { id: 5, name: "OpenAI" },
+      { id: 6, name: "DeepSeek" },
+      { id: 7, name: "LangChain" },
+      { id: 8, name: "LangGraph" },
+      { id: 9, name: "Vector Database" },
+    ],
+  },
+  {
+    title: "Afya",
+    category: "Digital wellbeing · Mobile",
+    desc: "A time-blocking and digital-wellbeing app designed to reduce excessive social-media scrolling and help people use their time more intentionally.",
+    subdesc:
+      "Selected apps only unlock after completing movement challenges such as push-ups, squats, or walking, turning screen-time limits into healthier daily habits.",
+    texture: "/textures/project/project7.mp4",
+    logoText: "AF",
+    logoStyle: {
+      backgroundColor: "#10251F",
+      border: "0.2px solid #68D8B2",
+      boxShadow: "0px 0px 60px 0px rgba(104, 216, 178, 0.3)",
+      color: "#A9F4DA",
+    },
+    spotlight: "/assets/spotlight1.png",
+    tags: [
+      { id: 1, name: "React", path: "/assets/react.svg" },
+      { id: 2, name: "Supabase" },
+      { id: 3, name: "WatermelonDB" },
+    ],
+  },
+  {
+    title: "Dream Lanterns",
+    category: "Game design · Local multiplayer",
+    desc: "Two halves of one flame, tied together by a single thread of light, fight all night over the lost dreams that keep a shrine burning.",
+    subdesc:
+      "A local 1v1 couch game where Wick guides wandering dream-spirits home while Gloam scatters them into the dark. Positioning controls the elastic tether, and the shrine's breathing light shows who is winning without putting a single number on screen.",
+    texture: "/textures/project/project5.mp4",
+    logoText: "DL",
+    logoStyle: {
+      backgroundColor: "#17172A",
+      border: "0.2px solid #D9C16F",
+      boxShadow: "0px 0px 60px 0px rgba(217, 193, 111, 0.32)",
+      color: "#F5E8B7",
+    },
+    spotlight: "/assets/spotlight5.png",
+    availability: ["Private repository", "No public demo"],
+    screenshots: [
+      {
+        src: "/assets/dream-lanterns-1.avif",
+        alt: "Dream Lanterns title screen with Wick and Gloam beside the shrine",
+      },
+      {
+        src: "/assets/dream-lanterns-2.avif",
+        alt: "Wick and Gloam connected by their elastic tether during a match",
+      },
+      {
+        src: "/assets/dream-lanterns-3.avif",
+        alt: "Dream Lanterns arena being developed in the Unity editor",
+      },
+    ],
+    tags: [
+      { id: 1, name: "Unity" },
+      { id: 2, name: "C#" },
+      { id: 3, name: "3D" },
+      { id: 4, name: "Local multiplayer" },
+      { id: 5, name: "PvP" },
+      { id: 6, name: "Couch co-op" },
+      { id: 7, name: "Physics" },
+      { id: 8, name: "Game design" },
+    ],
+  },
+  {
     title: "Rose - E-commerce website",
+    category: "Commerce · Web platform",
     desc: "Rose is a comprehensive e-commerce website for gifts and flowers. It offers a user-friendly interface, secure payment options, and a seamless shopping experience.",
     subdesc: "Next.js, Tailwind CSS, TypeScript, ShadCn ,NextAuth",
     href: "https://flowered-commerce.vercel.app/",
-    texture: "/textures/project/project1.mp4",
+    texture: "/textures/project/project4.mp4",
     logo: "/assets/rose.png",
     logoStyle: {
       backgroundColor: "#FDD6EE",
@@ -139,6 +229,7 @@ export const myProjects = [
   },
   {
     title: "FreshCart - E-commerce website",
+    category: "Commerce · Web platform",
     desc: "FreshCart is a comprehensive e-commerce website that caters to a wide range of products and services. It offers a user-friendly interface, secure payment options, and a seamless shopping experience.",
     subdesc: "React, Tailwind CSS, TypeScript, bootstrap, fontawesome",
     href: "https://eco-iota-amber.vercel.app/",
@@ -173,82 +264,84 @@ export const myProjects = [
       },
     ],
   },
-  {
-    title: "momo-clone - Real-Time meeting and Collaboration App",
-    desc: "a Real-Time meeting and Collaboration App. It provides a seamless experience for users to create and join virtual meetings, share files, and communicate with other participants in real-time.",
-    subdesc:
-      "Built with Next.js 14, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
-    href: "https://momo-clone.vercel.app/",
-    texture: "/textures/project/project2.mp4",
-    logo: "/assets/project-logo2.svg",
-    logoStyle: {
-      backgroundColor: "#13202F",
-      border: "0.2px solid #17293E",
-      boxShadow: "0px 0px 60px 0px #2F6DB54D",
-    },
-    spotlight: "/assets/spotlight2.png",
-    tags: [
-      {
-        id: 1,
-        name: "Next.js",
-        path: "/assets/nextjs.svg",
-      },
-      {
-        id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
-      },
-      {
-        id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
-      },
-      {
-        id: 4,
-        name: "clerk",
-        path: "/assets/clerk.avif",
-      },
-    ],
-  },
-  {
-    title: "MomoTube - YouTube Clone",
-    desc: "MomoTube is a YouTube clone that provides a user-friendly interface for users to watch videos, create playlists, and share their favorite content with others.",
-    subdesc:
-      "Built with React.js, Tailwind CSS, TypeScript , Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
-    href: "https://momo-tube.vercel.app/",
-    texture: "/textures/project/project3.mp4",
-    logo: "/assets/project-logo3.png",
-    logoStyle: {
-      backgroundColor: "#600001",
-      background:
-        "linear-gradient(0deg, #600001, #600051), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
-      border: "0.2px solid #600001",
-      boxShadow: "0px 0px 60px 0px rgba(135, 50, 6, 0.3)",
-    },
-    spotlight: "/assets/spotlight3.png",
-    tags: [
-      {
-        id: 1,
-        name: "React.js",
-        path: "/assets/react.svg",
-      },
-      {
-        id: 2,
-        name: "TailwindCSS",
-        path: "assets/tailwindcss.png",
-      },
-      {
-        id: 3,
-        name: "TypeScript",
-        path: "/assets/typescript.png",
-      },
-      {
-        id: 4,
-        name: "MUI",
-        path: "/assets/mui.svg",
-      },
-    ],
-  },
+  // {
+  //   title: "momo-clone - Real-Time meeting and Collaboration App",
+  //   desc: "a Real-Time meeting and Collaboration App. It provides a seamless experience for users to create and join virtual meetings, share files, and communicate with other participants in real-time.",
+  //   subdesc:
+  //     "Built with Next.js 14, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
+  //   href: "https://momo-clone.vercel.app/",
+  //   texture: "/textures/project/project2.mp4",
+  //   logo: "/assets/project-logo2.svg",
+  //   logoStyle: {
+  //     backgroundColor: "#13202F",
+  //     border: "0.2px solid #17293E",
+  //     boxShadow: "0px 0px 60px 0px #2F6DB54D",
+  //   },
+  //   spotlight: "/assets/spotlight2.png",
+  //   tags: [
+  //     {
+  //       id: 1,
+  //       name: "Next.js",
+  //       path: "/assets/nextjs.svg",
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "TailwindCSS",
+  //       path: "assets/tailwindcss.png",
+  //     },
+  //     {
+  //       id: 3,
+  //       name: "TypeScript",
+  //       path: "/assets/typescript.png",
+  //     },
+  //     {
+  //       id: 4,
+  //       name: "clerk",
+  //       path: "/assets/clerk.avif",
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "MomoTube - YouTube Clone",
+  //   category: "Media · Web platform",
+  //   desc: "MomoTube is a YouTube clone that provides a user-friendly interface for users to watch videos, create playlists, and share their favorite content with others.",
+  //   subdesc:
+  //     "Built with React.js, Tailwind CSS, TypeScript , Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
+  //   href: "https://momo-tube.vercel.app/",
+  //   texture: "/textures/project/project3.mp4",
+  //   logo: "/assets/project-logo3.png",
+  //   logoStyle: {
+  //     backgroundColor: "#600001",
+  //     background:
+  //       "linear-gradient(0deg, #600001, #600051), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
+  //     border: "0.2px solid #600001",
+  //     boxShadow: "0px 0px 60px 0px rgba(135, 50, 6, 0.3)",
+  //   },
+  //   spotlight: "/assets/spotlight3.png",
+  //   tags: [
+  //     {
+  //       id: 1,
+  //       name: "React.js",
+  //       path: "/assets/react.svg",
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "TailwindCSS",
+  //       path: "assets/tailwindcss.png",
+  //     },
+  //     {
+  //       id: 3,
+  //       name: "TypeScript",
+  //       path: "/assets/typescript.png",
+  //     },
+  //     {
+  //       id: 4,
+  //       name: "MUI",
+  //       path: "/assets/mui.svg",
+  //     },
+  //   ],
+  // },
+
 ];
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {

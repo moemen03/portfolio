@@ -1,167 +1,260 @@
-import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
-// import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import PropTypes from "prop-types";
 
-import { EarthCanvas } from "../components/canvas";
 import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
-import { styles } from "../constant/index";
-import whatsapp from "../assets/whatsapp.png";
-import email1 from "../assets/email1.png";
+import cvPdfUrl from "../../Moamen_Alaa_Software_Engineer_CV.pdf?url";
 
-const Contact = () => {
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+const contactDetails = [
+  { label: "Location", value: "Cairo, Egypt", icon: "location" },
+  {
+    label: "Email",
+    value: "moemenatia4@gmail.com",
+    href: "mailto:moemenatia4@gmail.com",
+    icon: "email",
+  },
+  {
+    label: "Call",
+    value: "+20 100 433 1573",
+    href: "tel:+201004331573",
+    icon: "phone",
+  },
+  {
+    label: "CV",
+    value: "Click to download",
+    href: cvPdfUrl,
+    download: true,
+    icon: "download",
+  },
+];
 
-  const [loading, setLoading] = useState(false);
+const initialForm = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+  website: "",
+};
 
-  // const handleChange = (e) => {
-  //   const { target } = e;
-  //   const { name, value } = target;
-
-  //   setForm({
-  //     ...form,
-  //     [name]: value,
-  //   });
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setLoading(true);
-
-  //   emailjs
-  //     .send(
-  //       import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-  //       import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-  //       {
-  //         from_name: form.name,
-  //         to_name: "JavaScript Mastery",
-  //         from_email: form.email,
-  //         to_email: "sujata@jsmastery.pro",
-  //         message: form.message,
-  //       },
-  //       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-  //     )
-  //     .then(
-  //       () => {
-  //         setLoading(false);
-  //         alert("Thank you. I will get back to you as soon as possible.");
-
-  //         setForm({
-  //           name: "",
-  //           email: "",
-  //           message: "",
-  //         });
-  //       },
-  //       (error) => {
-  //         setLoading(false);
-  //         console.error(error);
-
-  //         alert("Ahh, something went wrong. Please try again.");
-  //       }
-  //     );
-  // };
+function ContactIcon({ name }) {
+  const paths = {
+    location: (
+      <>
+        <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </>
+    ),
+    email: (
+      <>
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m4 7 8 6 8-6" />
+      </>
+    ),
+    phone: (
+      <path d="M8.5 3.5 6.2 4.7c-1 .5-1.4 1.6-1 2.6 2.1 5.2 6.3 9.4 11.5 11.5 1 .4 2.1 0 2.6-1l1.2-2.3-4.2-2-1.2 1.8c-2.8-1.4-5-3.6-6.4-6.4l1.8-1.2-2-4.2Z" />
+    ),
+    download: (
+      <>
+        <path d="M12 3v12" />
+        <path d="m7 10 5 5 5-5" />
+        <path d="M5 20h14" />
+      </>
+    ),
+  };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      {paths[name]}
+    </svg>
+  );
+}
+
+ContactIcon.propTypes = {
+  name: PropTypes.oneOf(["location", "email", "phone", "download"]).isRequired,
+};
+
+function ContactDetail({ detail, index }) {
+  const content = (
+    <>
+      <span className={`contact-detail-icon contact-detail-icon--${index}`}>
+        <ContactIcon name={detail.icon} />
+      </span>
+      <span className="contact-detail-copy">
+        <strong>{detail.label}</strong>
+        <span>{detail.value}</span>
+      </span>
+    </>
+  );
+
+  if (!detail.href) {
+    return <div className="contact-detail">{content}</div>;
+  }
+
+  return (
+    <a
+      className="contact-detail"
+      href={detail.href}
+      download={detail.download || undefined}
     >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
-      >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+      {content}
+    </a>
+  );
+}
 
-        {/* <form
-          // ref={formRef}
-          // onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
-            <input
-              type='text'
-              name='name'
-              // value={form.name}
-              // onChange={handleChange}
-              placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
-            <input
-              type='email'
-              name='email'
-              // value={form.email}
-              // onChange={handleChange}
-              placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
-            <textarea
-              rows={7}
-              name='message'
-              // value={form.message}
-              // onChange={handleChange}
-              placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
+ContactDetail.propTypes = {
+  detail: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    href: PropTypes.string,
+    download: PropTypes.bool,
+    icon: PropTypes.oneOf(["location", "email", "phone", "download"]).isRequired,
+  }).isRequired,
+  index: PropTypes.number.isRequired,
+};
 
-          <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
-        </form> */}
-        <div
-          className="mt-5 w-full px-6 py-5 bg-purple-500 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 flex flex-col gap-4"
-        >
-          <a
-            href="https://wa.me/+201004331573?text=Hi%2C%20I%20just%20checked%20your%20frontend%20portfolio%20and%20I'm%20impressed.%20I'd%20love%20to%20connect%20and%20learn%20more%20about%20your%20work"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex px-2 py-3 justify-between items-center gap-4  bg-black hover:bg-slate-600 hover:text-white transition-all rounded-[20px]"
-          >
-            <img
-              src={whatsapp}
-              alt="whatsapp"
-              className="w-[50px] h-[50px] object-contain cursor-pointer"
-            />
-            <p className="font-medium">Contact me on WhatsApp</p>
-          </a>
+function Contact() {
+  const [form, setForm] = useState(initialForm);
+  const [status, setStatus] = useState({ type: "idle", message: "" });
 
-          <a
-            href="mailto:moemenatia4@gmail.com"
-            className="flex px-2 py-3 justify-between items-center gap-4  bg-black hover:bg-slate-600 hover:text-white transition-all rounded-[20px]"
-          >
-            <img
-              src={email1}
-              alt="email"
-              className="w-[50px] h-[50px] object-contain cursor-pointer"
-            />
-            <p className="font-medium">Send me a email</p>
-          </a>
+  const handleChange = ({ target: { name, value } }) => {
+    setForm((current) => ({ ...current, [name]: value }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus({ type: "loading", message: "Sending your message…" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error || "The message could not be sent.");
+      }
+
+      setForm(initialForm);
+      setStatus({
+        type: "success",
+        message: "Message sent. Thanks — I’ll get back to you soon.",
+      });
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message: error.message || "Something went wrong. Please try again.",
+      });
+    }
+  };
+
+  return (
+    <div className="contact-showcase">
+      <div className="contact-intro">
+        <p className="contact-eyebrow"><span /> Contact</p>
+        <h2>
+          Let&apos;s make something <em>amazing</em> together.
+        </h2>
+        <p className="contact-invitation">
+          Start by <a href="mailto:moemenatia4@gmail.com">saying hi</a>
+        </p>
+
+        <div className="contact-details" aria-label="Contact details">
+          {contactDetails.map((detail, index) => (
+            <ContactDetail key={detail.label} detail={detail} index={index} />
+          ))}
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      >
-        <EarthCanvas />
-      </motion.div>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="contact-form-row">
+          <label>
+            <span>Name</span>
+            <input
+              type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              placeholder="Name"
+              autoComplete="name"
+              maxLength={80}
+              required
+            />
+          </label>
+          <label>
+            <span>Email</span>
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="Email"
+              autoComplete="email"
+              maxLength={160}
+              required
+            />
+          </label>
+        </div>
+
+        <label>
+          <span>Subject</span>
+          <input
+            type="text"
+            name="subject"
+            value={form.subject}
+            onChange={handleChange}
+            placeholder="Subject"
+            maxLength={140}
+            required
+          />
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea
+            name="message"
+            value={form.message}
+            onChange={handleChange}
+            placeholder="Message"
+            rows={7}
+            maxLength={5000}
+            required
+          />
+        </label>
+
+        <label className="contact-honeypot" aria-hidden="true">
+          Website
+          <input
+            type="text"
+            name="website"
+            value={form.website}
+            onChange={handleChange}
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </label>
+
+        <button
+          className="contact-submit"
+          type="submit"
+          disabled={status.type === "loading"}
+        >
+          <span>{status.type === "loading" ? "Sending…" : "Send Message"}</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m5 12 14-7-5 14-2.5-5.5L5 12Z" />
+          </svg>
+        </button>
+
+        <p
+          className={`contact-status contact-status--${status.type}`}
+          role="status"
+          aria-live="polite"
+        >
+          {status.message}
+        </p>
+      </form>
     </div>
   );
-};
+}
 
 export default SectionWrapper(Contact, "contact");

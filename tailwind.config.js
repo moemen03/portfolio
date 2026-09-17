@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        generalsans: ['General Sans', 'sans-serif'],
+        generalsans: ['Space Grotesk', 'sans-serif'],
+        pixel: ['Pixelify Sans', 'sans-serif'],
       },
       colors: {
         black: {

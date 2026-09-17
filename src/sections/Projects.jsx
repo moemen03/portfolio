@@ -1,99 +1,270 @@
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { Suspense, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { Center, OrbitControls } from '@react-three/drei';
+import { useEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
 
 import { myProjects } from '../constant/index.js';
-import CanvasLoader from '../components/CanvasLoader.jsx';
-import DemoComputer from '../components/DemoComputer.jsx';
 
-const projectCount = myProjects.length;
+const projectThemes = [
+  { accent: '#a78bfa', accentRgb: '167, 139, 250', surface: '#161129' },
+  { accent: '#65e6bd', accentRgb: '101, 230, 189', surface: '#0d211d' },
+  { accent: '#f2cb72', accentRgb: '242, 203, 114', surface: '#211b12' },
+  { accent: '#f19aca', accentRgb: '241, 154, 202', surface: '#25131f' },
+  { accent: '#5fe0a0', accentRgb: '95, 224, 160', surface: '#0d2118' },
+];
 
-const Projects = () => {
-  const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
+const formatProjectNumber = (index) => String(index + 1).padStart(2, '0');
 
-  const handleNavigation = (direction) => {
-    setSelectedProjectIndex((prevIndex) => {
-      if (direction === 'previous') {
-        return prevIndex === 0 ? projectCount - 1 : prevIndex - 1;
-      } else {
-        return prevIndex === projectCount - 1 ? 0 : prevIndex + 1;
-      }
-    });
-  };
+const projectId = (title) => `project-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`;
 
-  useGSAP(() => {
-    gsap.fromTo(`.animatedText`, { opacity: 0 }, { opacity: 1, duration: 1, stagger: 0.2, ease: 'power2.inOut' });
-  }, [selectedProjectIndex]);
+const displayTitle = (title) => title.split(' - ')[0];
 
-  const currentProject = myProjects[selectedProjectIndex];
+const projectPropType = PropTypes.shape({
+  availability: PropTypes.arrayOf(PropTypes.string),
+  category: PropTypes.string,
+  desc: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  logo: PropTypes.string,
+  logoStyle: PropTypes.object,
+  logoText: PropTypes.string,
+  subdesc: PropTypes.string,
+  tags: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  texture: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+});
+
+const ProjectPreview = ({ project, index }) => {
+  const videoRef = useRef(null);
+  const isMobileProduct = index < 2;
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) video.play().catch(() => undefined);
+        else video.pause();
+      },
+      { threshold: 0.35 },
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, [project.texture]);
 
   return (
-    <section id="projects" className="c-space my-20">
-      <p className="head-text text-center">My Selected Work</p>
+    <div className={`project-media-stage ${isMobileProduct ? 'project-media-stage--mobile' : ''}`}>
+      <div className="project-media-orbit project-media-orbit--one" aria-hidden="true" />
+      <div className="project-media-orbit project-media-orbit--two" aria-hidden="true" />
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
-        <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200">
-          <div className="absolute top-0 right-0">
-            <img src={currentProject.spotlight} alt="spotlight" className="w-full h-96 object-cover rounded-xl" />
+      <div className={`project-device ${isMobileProduct ? 'project-device--phone' : 'project-device--screen'}`}>
+        {isMobileProduct ? (
+          <div className="project-device-phone-bar" aria-hidden="true">
+            <span>9:41</span>
+            <i />
+            <span>● ●</span>
           </div>
-
-          <div className="p-3 backdrop-filter backdrop-blur-3xl w-fit rounded-lg" style={currentProject.logoStyle}>
-            <img className="w-10 h-10 shadow-sm" src={currentProject.logo} alt="logo" />
-          </div>
-
-          <div className="flex flex-col gap-5 text-white-600 my-5">
-            <p className="text-white text-2xl font-semibold animatedText">{currentProject.title}</p>
-
-            <p className="animatedText">{currentProject.desc}</p>
-            <p className="animatedText">{currentProject.subdesc}</p>
-          </div>
-
-          <div className="flex items-center mt-2 justify-between flex-wrap gap-5">
-            <div className="flex items-center gap-3">
-              {currentProject.tags.map((tag, index) => (
-                <div key={index} className="tech-logo">
-                  <img src={tag.path} alt={tag.name} />
-                </div>
-              ))}
+        ) : (
+          <div className="project-device-browser-bar" aria-hidden="true">
+            <div>
+              <i />
+              <i />
+              <i />
             </div>
+            <span>{displayTitle(project.title).toLowerCase().replaceAll(' ', '')}.studio</span>
+          </div>
+        )}
 
+        <video
+          ref={videoRef}
+          className="project-preview-video"
+          src={project.texture}
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label={`${displayTitle(project.title)} project preview`}
+        />
+      </div>
+
+      <div className="project-media-caption" aria-hidden="true">
+        <span>Live motion</span>
+        <span>{isMobileProduct ? 'Mobile experience' : 'Product walkthrough'}</span>
+      </div>
+    </div>
+  );
+};
+
+ProjectPreview.propTypes = {
+  index: PropTypes.number.isRequired,
+  project: projectPropType.isRequired,
+};
+
+const ProjectLogo = ({ project }) => (
+  <div className="project-story-logo" style={project.logoStyle}>
+    {project.logo ? <img src={project.logo} alt="" /> : <span aria-hidden="true">{project.logoText}</span>}
+  </div>
+);
+
+ProjectLogo.propTypes = {
+  project: projectPropType.isRequired,
+};
+
+const ProjectAction = ({ project }) => {
+  if (project.href) {
+    return (
+      <a className="project-story-link" href={project.href} target="_blank" rel="noreferrer">
+        <span>View live project</span>
+        <i aria-hidden="true">↗</i>
+      </a>
+    );
+  }
+
+  if (project.availability?.length) {
+    return (
+      <div className="project-story-availability" aria-label="Project availability">
+        {project.availability.map((status) => (
+          <span key={status}>{status}</span>
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <div className="project-story-preview-label">
+      <span />
+      Private product preview
+    </div>
+  );
+};
+
+ProjectAction.propTypes = {
+  project: projectPropType.isRequired,
+};
+
+const ProjectStory = ({ project, index, total }) => {
+  const theme = projectThemes[index % projectThemes.length];
+  const visibleTags = project.tags.slice(0, 6);
+  const remainingTags = project.tags.slice(6);
+
+  return (
+    <article
+      id={projectId(project.title)}
+      className="project-story"
+      style={{
+        '--project-accent': theme.accent,
+        '--project-accent-rgb': theme.accentRgb,
+        '--project-surface': theme.surface,
+      }}
+    >
+      <ProjectPreview project={project} index={index} />
+
+      <div className="project-story-content">
+        <div className="project-story-topline">
+          <span>{formatProjectNumber(index)}</span>
+          <span>{project.category ?? 'Digital product'}</span>
+          <span>{String(total).padStart(2, '0')}</span>
+        </div>
+
+        <div className="project-story-heading">
+          <ProjectLogo project={project} />
+          <h3>{displayTitle(project.title)}</h3>
+        </div>
+
+        <p className="project-story-lead">{project.desc}</p>
+        <p className="project-story-detail">{project.subdesc}</p>
+
+        <div className="project-story-tags" aria-label={`${displayTitle(project.title)} technology stack`}>
+          {visibleTags.map((tag, tagIndex) => (
+            <span key={`${tag.name}-${tagIndex}`}>{tag.name}</span>
+          ))}
+          {remainingTags.length > 0 && (
+            <span title={remainingTags.map((tag) => tag.name).join(', ')}>+{remainingTags.length} more</span>
+          )}
+        </div>
+
+        <div className="project-story-footer">
+          <ProjectAction project={project} />
+          <span className="project-story-discipline">Design · Development</span>
+        </div>
+      </div>
+    </article>
+  );
+};
+
+ProjectStory.propTypes = {
+  index: PropTypes.number.isRequired,
+  project: projectPropType.isRequired,
+  total: PropTypes.number.isRequired,
+};
+
+const Projects = () => {
+  const [activeProject, setActiveProject] = useState(0);
+
+  useEffect(() => {
+    const stories = [...document.querySelectorAll('.project-story')];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleEntry) setActiveProject(stories.indexOf(visibleEntry.target));
+      },
+      { rootMargin: '-22% 0px -46% 0px', threshold: [0.05, 0.25, 0.5] },
+    );
+
+    stories.forEach((story) => observer.observe(story));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <section id="projects" className="projects-showcase c-space">
+      <header className="projects-showcase-header">
+        <div className="projects-showcase-title">
+          <p className="projects-showcase-eyebrow">
+            <span />
+            Selected work · 2024—2026
+          </p>
+          <h2>
+            Digital products with
+            <em> a pulse.</em>
+          </h2>
+        </div>
+
+        <div className="projects-showcase-intro">
+          <p>
+            From AI-native tools to playful worlds—each project pairs strong engineering with an experience people
+            can feel.
+          </p>
+          <span>Scroll to explore the collection</span>
+        </div>
+      </header>
+
+      <nav className="projects-index" aria-label="Selected work index">
+        <span className="projects-index-label">Project index</span>
+        <div className="projects-index-links">
+          {myProjects.map((project, index) => (
             <a
-              className="flex items-center py-5  gap-2 cursor-pointer text-white-600"
-              href={currentProject.href}
-              target="_blank"
-              rel="noreferrer">
-              <p>Check Live Site</p>
-              <img src="/assets/arrow-up.png" alt="arrow" className="w-3 h-3" />
+              key={project.title}
+              href={`#${projectId(project.title)}`}
+              className={activeProject === index ? 'is-active' : ''}
+              aria-current={activeProject === index ? 'true' : undefined}
+            >
+              <span>{formatProjectNumber(index)}</span>
+              {displayTitle(project.title)}
             </a>
-          </div>
-
-          <div className="flex justify-between items-center mt-7">
-            <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
-              <img src="/assets/left-arrow.png" alt="left arrow" />
-            </button>
-
-            <button className="arrow-btn" onClick={() => handleNavigation('next')}>
-              <img src="/assets/right-arrow.png" alt="right arrow" className="w-4 h-4" />
-            </button>
-          </div>
+          ))}
         </div>
+      </nav>
 
-        <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
-          <Canvas>
-            <ambientLight intensity={Math.PI} />
-            <directionalLight position={[10, 10, 5]} />
-            <Center>
-              <Suspense fallback={<CanvasLoader />}>
-                <group scale={2} position={[0, -3, 0]} rotation={[0, -0.1, 0]}>
-                  <DemoComputer texture={currentProject.texture} />
-                </group>
-              </Suspense>
-            </Center>
-            <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
-          </Canvas>
-        </div>
+      <div className="projects-stories">
+        {myProjects.map((project, index) => (
+          <ProjectStory key={project.title} project={project} index={index} total={myProjects.length} />
+        ))}
       </div>
     </section>
   );
