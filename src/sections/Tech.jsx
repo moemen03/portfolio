@@ -120,7 +120,7 @@ const skillCategories = [
       { name: "GitHub", level: 92, icon: "/assets/github.svg" },
       { name: "Docker", level: 80, icon: docker },
       { name: "Vercel", level: 94, abbr: "▲" },
-      { name: "Netlify", level: 89, abbr: "NT" },
+      // { name: "Netlify", level: 89, abbr: "NT" },
       // { name: "AWS", level: 72, abbr: "AWS" },
       { name: "CI / CD", level: 78, abbr: "CI" },
       // { name: "Linux", level: 80, abbr: "LX" },
