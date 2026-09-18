@@ -149,7 +149,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact-showcase">
+    <div className="contact-showcase section-glass">
       <div className="contact-intro">
         <p className="contact-eyebrow"><span /> Contact</p>
         <h2>

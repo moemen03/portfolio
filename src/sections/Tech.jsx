@@ -253,7 +253,7 @@ const Tech = () => {
   };
 
   return (
-    <section ref={sectionRef} className="skills-section" aria-labelledby="skills-heading">
+    <section ref={sectionRef} className="skills-section section-glass" aria-labelledby="skills-heading">
       <div className="skills-title">
         <p><span /> 04 / Capabilities</p>
         <h2 id="skills-heading">Skills &amp; Expertise</h2>

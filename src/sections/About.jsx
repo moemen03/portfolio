@@ -35,7 +35,7 @@ const specialties = [
 
 const About = () => {
   return (
-    <section className="about-minimal c-space" id="about" aria-labelledby="about-title">
+    <section className="about-minimal section-glass c-space" id="about" aria-labelledby="about-title">
       <div className="about-minimal-grid">
         <div className="about-minimal-services" aria-label="What I do">
           <p className="about-minimal-label">What I do</p>

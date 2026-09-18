@@ -131,9 +131,10 @@ export const myProjects = [
   {
     title: "Afya",
     category: "Digital wellbeing · Mobile",
-    desc: "A time-blocking and digital-wellbeing app designed to reduce excessive social-media scrolling and help people use their time more intentionally.",
+    desc:
+      "A mobile app that turns distracting screen time into a physical reward: choose apps to block, then earn access back through short bursts of movement.",
     subdesc:
-      "Selected apps only unlock after completing movement challenges such as push-ups, squats, or walking, turning screen-time limits into healthier daily habits.",
+      "Push-ups, squats, jumping jacks, and steps unlock time; borrowed time becomes exercise debt that must be repaid before a hard lockout. Built offline-first with native iOS and Android app-blocking integrations.",
     texture: "/textures/project/project7.mp4",
     logoText: "AF",
     logoStyle: {
@@ -144,9 +145,25 @@ export const myProjects = [
     },
     spotlight: "/assets/spotlight1.png",
     tags: [
-      { id: 1, name: "React", path: "/assets/react.svg" },
-      { id: 2, name: "Supabase" },
-      { id: 3, name: "WatermelonDB" },
+      { id: 1, name: "React Native", path: "/assets/react.svg" },
+      { id: 2, name: "Expo" },
+      { id: 3, name: "TypeScript" },
+      { id: 4, name: "Expo Router" },
+      { id: 5, name: "Zustand" },
+      { id: 6, name: "WatermelonDB" },
+      { id: 7, name: "SQLite" },
+      { id: 8, name: "Motion sensors" },
+      { id: 9, name: "Vision Camera" },
+      { id: 10, name: "MediaPipe (planned)" },
+      { id: 11, name: "Apple Screen Time" },
+      { id: 12, name: "Family Controls" },
+      { id: 13, name: "DeviceActivity" },
+      { id: 14, name: "Android Accessibility" },
+      { id: 15, name: "Expo background tasks" },
+      { id: 16, name: "Haptics" },
+      { id: 17, name: "Custom fonts" },
+      { id: 18, name: "Jest" },
+      { id: 19, name: "EAS Build" },
     ],
   },
   {
@@ -191,6 +208,40 @@ export const myProjects = [
     ],
   },
   {
+    title: "fda-agent",
+    category: "Financial intelligence · Web platform",
+    desc: "A tool-augmented financial research assistant that turns natural-language market questions into structured, chart-rich investment briefs.",
+    subdesc:
+      "It combines live market data, company fundamentals, SEC filings, macroeconomic indicators, and web research with claim-level citations, provenance tracking, and safeguards against unsupported trading recommendations.",
+    texture: "/textures/project/project8.mp4",
+    logoText: "FDA",
+    logoStyle: {
+      backgroundColor: "#0C1D36",
+      border: "0.2px solid #6AB8FF",
+      boxShadow: "0px 0px 60px 0px rgba(106, 184, 255, 0.3)",
+      color: "#C9E6FF",
+    },
+    spotlight: "/assets/spotlight4.png",
+    tags: [
+      { id: 1, name: "Python" },
+      { id: 2, name: "Streamlit" },
+      { id: 3, name: "FastAPI" },
+      { id: 4, name: "Pydantic" },
+      { id: 5, name: "OpenAI · Anthropic · DeepSeek" },
+      { id: 6, name: "pandas · NumPy · SciPy" },
+      { id: 7, name: "yfinance" },
+      { id: 8, name: "Plotly" },
+      { id: 9, name: "Matplotlib" },
+      { id: 10, name: "FRED" },
+      { id: 11, name: "SEC EDGAR" },
+      { id: 12, name: "NewsAPI" },
+      { id: 13, name: "Tavily" },
+      { id: 14, name: "Pytest" },
+      { id: 15, name: "Ruff" },
+      { id: 16, name: "Black" },
+    ],
+  },
+  {
     title: "Rose - E-commerce website",
     category: "Commerce · Web platform",
     desc: "Rose is a comprehensive e-commerce website for gifts and flowers. It offers a user-friendly interface, secure payment options, and a seamless shopping experience.",
@@ -227,6 +278,7 @@ export const myProjects = [
       },
     ],
   },
+
   {
     title: "FreshCart - E-commerce website",
     category: "Commerce · Web platform",
@@ -264,83 +316,84 @@ export const myProjects = [
       },
     ],
   },
-  // {
-  //   title: "momo-clone - Real-Time meeting and Collaboration App",
-  //   desc: "a Real-Time meeting and Collaboration App. It provides a seamless experience for users to create and join virtual meetings, share files, and communicate with other participants in real-time.",
-  //   subdesc:
-  //     "Built with Next.js 14, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
-  //   href: "https://momo-clone.vercel.app/",
-  //   texture: "/textures/project/project2.mp4",
-  //   logo: "/assets/project-logo2.svg",
-  //   logoStyle: {
-  //     backgroundColor: "#13202F",
-  //     border: "0.2px solid #17293E",
-  //     boxShadow: "0px 0px 60px 0px #2F6DB54D",
-  //   },
-  //   spotlight: "/assets/spotlight2.png",
-  //   tags: [
-  //     {
-  //       id: 1,
-  //       name: "Next.js",
-  //       path: "/assets/nextjs.svg",
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "TailwindCSS",
-  //       path: "assets/tailwindcss.png",
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "TypeScript",
-  //       path: "/assets/typescript.png",
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "clerk",
-  //       path: "/assets/clerk.avif",
-  //     },
-  //   ],
-  // },
-  // {
-  //   title: "MomoTube - YouTube Clone",
-  //   category: "Media · Web platform",
-  //   desc: "MomoTube is a YouTube clone that provides a user-friendly interface for users to watch videos, create playlists, and share their favorite content with others.",
-  //   subdesc:
-  //     "Built with React.js, Tailwind CSS, TypeScript , Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
-  //   href: "https://momo-tube.vercel.app/",
-  //   texture: "/textures/project/project3.mp4",
-  //   logo: "/assets/project-logo3.png",
-  //   logoStyle: {
-  //     backgroundColor: "#600001",
-  //     background:
-  //       "linear-gradient(0deg, #600001, #600051), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
-  //     border: "0.2px solid #600001",
-  //     boxShadow: "0px 0px 60px 0px rgba(135, 50, 6, 0.3)",
-  //   },
-  //   spotlight: "/assets/spotlight3.png",
-  //   tags: [
-  //     {
-  //       id: 1,
-  //       name: "React.js",
-  //       path: "/assets/react.svg",
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "TailwindCSS",
-  //       path: "assets/tailwindcss.png",
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "TypeScript",
-  //       path: "/assets/typescript.png",
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "MUI",
-  //       path: "/assets/mui.svg",
-  //     },
-  //   ],
-  // },
+
+  {
+    title: "momo-clone - Real-Time meeting and Collaboration App",
+    desc: "a Real-Time meeting and Collaboration App. It provides a seamless experience for users to create and join virtual meetings, share files, and communicate with other participants in real-time.",
+    subdesc:
+      "Built with Next.js 14, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
+    href: "https://momo-clone.vercel.app/",
+    texture: "/textures/project/project2.mp4",
+    logo: "/assets/project-logo2.svg",
+    logoStyle: {
+      backgroundColor: "#13202F",
+      border: "0.2px solid #17293E",
+      boxShadow: "0px 0px 60px 0px #2F6DB54D",
+    },
+    spotlight: "/assets/spotlight2.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+        path: "/assets/nextjs.svg",
+      },
+      {
+        id: 2,
+        name: "TailwindCSS",
+        path: "assets/tailwindcss.png",
+      },
+      {
+        id: 3,
+        name: "TypeScript",
+        path: "/assets/typescript.png",
+      },
+      {
+        id: 4,
+        name: "clerk",
+        path: "/assets/clerk.avif",
+      },
+    ],
+  },
+  {
+    title: "MomoTube - YouTube Clone",
+    category: "Media · Web platform",
+    desc: "MomoTube is a YouTube clone that provides a user-friendly interface for users to watch videos, create playlists, and share their favorite content with others.",
+    subdesc:
+      "Built with React.js, Tailwind CSS, TypeScript , Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.",
+    href: "https://momo-tube.vercel.app/",
+    texture: "/textures/project/project3.mp4",
+    logo: "/assets/project-logo3.png",
+    logoStyle: {
+      backgroundColor: "#600001",
+      background:
+        "linear-gradient(0deg, #600001, #600051), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)",
+      border: "0.2px solid #600001",
+      boxShadow: "0px 0px 60px 0px rgba(135, 50, 6, 0.3)",
+    },
+    spotlight: "/assets/spotlight3.png",
+    tags: [
+      {
+        id: 1,
+        name: "React.js",
+        path: "/assets/react.svg",
+      },
+      {
+        id: 2,
+        name: "TailwindCSS",
+        path: "assets/tailwindcss.png",
+      },
+      {
+        id: 3,
+        name: "TypeScript",
+        path: "/assets/typescript.png",
+      },
+      {
+        id: 4,
+        name: "MUI",
+        path: "/assets/mui.svg",
+      },
+    ],
+  },
 
 ];
 

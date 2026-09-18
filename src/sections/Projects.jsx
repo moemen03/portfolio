@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 import { myProjects } from '../constant/index.js';
 
 const projectThemes = [
-  { accent: '#a78bfa', accentRgb: '167, 139, 250', surface: '#161129' },
+  { accent: '#f2cb72', accentRgb: '242, 203, 114', surface: '#211b12' },
   { accent: '#65e6bd', accentRgb: '101, 230, 189', surface: '#0d211d' },
   { accent: '#f2cb72', accentRgb: '242, 203, 114', surface: '#211b12' },
+  { accent: '#70b7ff', accentRgb: '112, 183, 255', surface: '#0c1b31' },
   { accent: '#f19aca', accentRgb: '241, 154, 202', surface: '#25131f' },
   { accent: '#5fe0a0', accentRgb: '95, 224, 160', surface: '#0d2118' },
+  { accent: '#70b7ff', accentRgb: '112, 183, 255', surface: '#0c1b31' },
+  { accent: '#731a29', accentRgb: '115, 26, 41', surface: '#731a29' },
+
 ];
 
 const formatProjectNumber = (index) => String(index + 1).padStart(2, '0');
@@ -136,7 +140,7 @@ const ProjectAction = ({ project }) => {
   return (
     <div className="project-story-preview-label">
       <span />
-      Private product preview
+      Product preview
     </div>
   );
 };
@@ -182,7 +186,12 @@ const ProjectStory = ({ project, index, total }) => {
             <span key={`${tag.name}-${tagIndex}`}>{tag.name}</span>
           ))}
           {remainingTags.length > 0 && (
-            <span title={remainingTags.map((tag) => tag.name).join(', ')}>+{remainingTags.length} more</span>
+            <span
+              title={remainingTags.map((tag) => tag.name).join(', ')}
+              aria-label={`Additional technologies: ${remainingTags.map((tag) => tag.name).join(', ')}`}
+            >
+              +{remainingTags.length} more
+            </span>
           )}
         </div>
 
@@ -222,7 +231,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects" className="projects-showcase c-space">
+    <section id="projects" className="projects-showcase section-glass c-space">
       <header className="projects-showcase-header">
         <div className="projects-showcase-title">
           <p className="projects-showcase-eyebrow">
