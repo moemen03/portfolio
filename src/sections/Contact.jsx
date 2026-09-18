@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { useForm, ValidationError } from "@formspree/react";
 
 import { SectionWrapper } from "../hoc";
 import cvPdfUrl from "../../Moamen_Alaa_Software_Engineer_CV.pdf?url";
@@ -32,8 +33,9 @@ const initialForm = {
   email: "",
   subject: "",
   message: "",
-  website: "",
 };
+
+const formspreeFormId = "xzezzzob";
 
 function ContactIcon({ name }) {
   const paths = {
@@ -113,40 +115,35 @@ ContactDetail.propTypes = {
 
 function Contact() {
   const [form, setForm] = useState(initialForm);
-  const [status, setStatus] = useState({ type: "idle", message: "" });
+  const [state, submitToFormspree, resetFormspree] = useForm(formspreeFormId);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      setForm(initialForm);
+    }
+  }, [state.succeeded]);
 
   const handleChange = ({ target: { name, value } }) => {
+    if (state.succeeded) {
+      resetFormspree();
+    }
+
     setForm((current) => ({ ...current, [name]: value }));
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setStatus({ type: "loading", message: "Sending your message…" });
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      const result = await response.json().catch(() => ({}));
-
-      if (!response.ok) {
-        throw new Error(result.error || "The message could not be sent.");
-      }
-
-      setForm(initialForm);
-      setStatus({
+  const status = state.succeeded
+    ? {
         type: "success",
         message: "Message sent. Thanks — I’ll get back to you soon.",
-      });
-    } catch (error) {
-      setStatus({
-        type: "error",
-        message: error.message || "Something went wrong. Please try again.",
-      });
-    }
-  };
+      }
+    : state.errors
+      ? {
+          type: "error",
+          message: "The message could not be sent. Please check the form and try again.",
+        }
+      : state.submitting
+        ? { type: "loading", message: "Sending your message…" }
+        : { type: "idle", message: "" };
 
   return (
     <div className="contact-showcase section-glass">
@@ -166,7 +163,7 @@ function Contact() {
         </div>
       </div>
 
-      <form className="contact-form" onSubmit={handleSubmit}>
+      <form className="contact-form" onSubmit={submitToFormspree}>
         <div className="contact-form-row">
           <label>
             <span>Name</span>
@@ -180,6 +177,12 @@ function Contact() {
               maxLength={80}
               required
             />
+            <ValidationError
+              className="contact-field-error"
+              prefix="Name"
+              field="name"
+              errors={state.errors}
+            />
           </label>
           <label>
             <span>Email</span>
@@ -192,6 +195,12 @@ function Contact() {
               autoComplete="email"
               maxLength={160}
               required
+            />
+            <ValidationError
+              className="contact-field-error"
+              prefix="Email"
+              field="email"
+              errors={state.errors}
             />
           </label>
         </div>
@@ -207,6 +216,12 @@ function Contact() {
             maxLength={140}
             required
           />
+          <ValidationError
+            className="contact-field-error"
+            prefix="Subject"
+            field="subject"
+            errors={state.errors}
+          />
         </label>
 
         <label>
@@ -220,15 +235,19 @@ function Contact() {
             maxLength={5000}
             required
           />
+          <ValidationError
+            className="contact-field-error"
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
         </label>
 
         <label className="contact-honeypot" aria-hidden="true">
           Website
           <input
             type="text"
-            name="website"
-            value={form.website}
-            onChange={handleChange}
+            name="_gotcha"
             tabIndex={-1}
             autoComplete="off"
           />
@@ -237,9 +256,9 @@ function Contact() {
         <button
           className="contact-submit"
           type="submit"
-          disabled={status.type === "loading"}
+          disabled={state.submitting}
         >
-          <span>{status.type === "loading" ? "Sending…" : "Send Message"}</span>
+          <span>{state.submitting ? "Sending…" : "Send Message"}</span>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="m5 12 14-7-5 14-2.5-5.5L5 12Z" />
           </svg>

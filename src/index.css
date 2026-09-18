@@ -5262,6 +5262,13 @@ a.contact-detail:hover {
   box-shadow: 0 0 0 3px rgba(159, 138, 255, 0.09);
 }
 
+.contact-field-error {
+  margin: 0.35rem 0 0;
+  color: #ff9188;
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
 .contact-honeypot {
   position: absolute !important;
   left: -9999px;
