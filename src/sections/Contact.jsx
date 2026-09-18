@@ -28,6 +28,21 @@ const contactDetails = [
   },
 ];
 
+const socialLinks = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/moamen-atia-b5773821a/",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/moamen_3laa/",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/moemen03",
+  },
+];
+
 const initialForm = {
   name: "",
   email: "",
@@ -161,6 +176,22 @@ function Contact() {
             <ContactDetail key={detail.label} detail={detail} index={index} />
           ))}
         </div>
+
+        <nav className="contact-socials" aria-label="Social profiles">
+          {socialLinks.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>{social.label}</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 17 17 7M9 7h8v8" />
+              </svg>
+            </a>
+          ))}
+        </nav>
       </div>
 
       <form className="contact-form" onSubmit={submitToFormspree}>
